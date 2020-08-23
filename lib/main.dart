@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
               );
             },
             icon: Icon(
-              Icons.arrow_right,
+              Icons.navigate_next,
               size: 60,
             ),
           ),

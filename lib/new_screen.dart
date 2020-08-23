@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_learn/state.dart';
+
 void main() => runApp(ListPreview());
 
 class ListPreview extends StatelessWidget {
@@ -43,6 +45,13 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => StateExample()));
+        },
+        child: Icon(Icons.navigate_next),
+      ),
       appBar: AppBar(
         title: Text('ListPreview'),
       ),
