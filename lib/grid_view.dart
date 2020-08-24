@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './text_field.dart';
 
 void main() => Grid();
 
@@ -18,9 +19,11 @@ class GridViewClass extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => TextFieldClass()));
+          // Navigator.pop(context);
         },
-        child: Icon(Icons.arrow_back),
+        child: Icon(Icons.navigate_next),
       ),
       appBar: AppBar(
         title: Text('Grid View '),
