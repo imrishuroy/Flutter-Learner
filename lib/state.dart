@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/grid_view.dart';
 
 void main() {
   runApp(StateExample());
@@ -24,6 +25,16 @@ class _StateAppState extends State<StateApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => GridViewClass(),
+              ));
+        },
+        child: Icon(Icons.navigate_next),
+      ),
       appBar: AppBar(
         title: Text('State Example'),
       ),
@@ -50,7 +61,7 @@ class _StateAppState extends State<StateApp> {
 
   _callStateChange() {
     setState(() {
-      statement = 'State Chnaged';
+      statement = 'State Changed';
     });
   }
 }
